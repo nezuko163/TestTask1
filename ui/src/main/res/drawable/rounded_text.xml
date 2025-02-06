@@ -1,0 +1,21 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Фон -->
+    <!--    <solid android:color="@color/grayBackground" />-->
+
+    <!-- Граница -->
+    <!--    <stroke-->
+    <!--        android:width="2dp"-->
+    <!--        android:color="#FFBB86FC" />-->
+
+    <!-- Радиус углов -->
+    <corners android:radius="40dp" />
+
+    <!-- Внутренние отступы -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp"
+        />
+
+</shape>

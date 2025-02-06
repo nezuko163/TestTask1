@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.nezuko.auth.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/login_layout">
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.nezuko.auth.RegistrationFragment"
+        android:label="register"
+        tools:layout="@layout/registration_layout">
+        <action
+            android:id="@+id/from_reg_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="false"
+            >
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.nezuko.auth.StartFragment"
+        android:label="start"
+        tools:layout="@layout/start_screen_layout">
+        <action
+            android:id="@+id/from_start_to_reg"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="false"
+            >
+
+        </action>
+    </fragment>
+
+
+
+</navigation>

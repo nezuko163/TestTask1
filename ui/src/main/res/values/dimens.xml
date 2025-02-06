@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tinyViewHeight">40dp</dimen>
+    <dimen name="smallViewHeight">50dp</dimen>
+    <dimen name="mediumViewHeight">60dp</dimen>
+    <dimen name="cardHeight">290dp</dimen>
+    <dimen name="imageInCardHeight">110dp</dimen>
+
+</resources>

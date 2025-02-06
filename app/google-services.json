@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "694853622834",
+    "project_id": "testtask-5021a",
+    "storage_bucket": "testtask-5021a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694853622834:android:783696db19c36f6a57302b",
+        "android_client_info": {
+          "package_name": "com.nezuko.testtask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoJL_dSzGtEsrQJhis0D4P8l224NTWa0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

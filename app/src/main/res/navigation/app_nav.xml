@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.nezuko.home.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/from_home_to_course"
+            app:destination="@id/course"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favourite"
+        android:name="com.nezuko.favourites.FavouritesFragment"
+        android:label="favourite"
+        tools:layout="@layout/fragment_favourites">
+
+        <action
+            android:id="@+id/from_favourite_to_course"
+            app:destination="@id/course"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/account"
+        android:name="com.nezuko.account.AccountFragment"
+        android:label="account"
+        tools:layout="@layout/fragment_account">
+
+        <action
+            android:id="@+id/from_account_to_course"
+            app:destination="@id/course"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/course"
+        android:name="com.nezuko.coursecard.CourseCardFragment"
+        android:label="course"
+        tools:layout="@layout/fragment_course_card">
+
+        <argument
+            android:name="courseId"
+            android:defaultValue="1L"
+            app:argType="long" />
+    </fragment>
+
+</navigation>

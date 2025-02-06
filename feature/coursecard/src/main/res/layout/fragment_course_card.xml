@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageCourse"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cardHeight"
+                android:background="@color/black"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/blurView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_text"
+                app:blurOverlayColor="#AAFFFFFF"
+                app:layout_constraintBottom_toBottomOf="@id/imageCourse"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tvBlurStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/star"
+                    android:drawablePadding="5dp"
+                    android:text="4.9"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </eightbitlab.com.blurview.BlurView>
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/blurView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_text"
+                app:blurOverlayColor="#AAFFFFFF"
+                app:layout_constraintBottom_toBottomOf="@id/imageCourse"
+                app:layout_constraintStart_toEndOf="@id/blurView">
+
+                <TextView
+                    android:id="@+id/tvBlurDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22 Мая 2024"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </eightbitlab.com.blurview.BlurView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/imageCourse">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="15dp"
+                    android:text="Java-разработчик с нуля"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mediumViewHeight"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgAuthor"
+                        android:layout_width="@dimen/mediumViewHeight"
+                        android:layout_height="@dimen/mediumViewHeight"
+                        android:layout_marginRight="15dp"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/DescriptionText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Автор" />
+
+                        <TextView
+                            android:id="@+id/tvAuthor"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:maxLines="1"
+                            android:text="AE"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/smallViewHeight"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/rounded_shape"
+                    android:backgroundTint="@color/green"
+                    android:text="Начать курс" />
+
+                <Button
+                    android:id="@+id/btnContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/smallViewHeight"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_shape"
+                    android:backgroundTint="@color/black"
+                    android:text="Перейти на платформу" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="О курсе"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    style="@style/DescriptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/arrowBack"
+            android:layout_width="@dimen/mediumViewHeight"
+            android:layout_height="@dimen/mediumViewHeight"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow_back" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/btnFavourite"
+            android:layout_width="@dimen/mediumViewHeight"
+            android:layout_height="@dimen/mediumViewHeight"
+            android:scaleType="centerCrop"
+            android:src="@drawable/favourite1" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
